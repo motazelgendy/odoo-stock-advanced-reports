@@ -1,8 +1,6 @@
 <odoo>
 
-    <!-- =========================
-         Wizard Form فقط فلاتر
-    ========================== -->
+
 
     <record id="view_stock_card_wizard_form" model="ir.ui.view">
         <field name="name">stock.card.wizard.form</field>
