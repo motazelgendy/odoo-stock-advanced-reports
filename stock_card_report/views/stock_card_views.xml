@@ -1,0 +1,64 @@
+<odoo>
+
+    <!-- =========================
+         Wizard Form فقط فلاتر
+    ========================== -->
+
+    <record id="view_stock_card_wizard_form" model="ir.ui.view">
+        <field name="name">stock.card.wizard.form</field>
+        <field name="model">stock.card.wizard</field>
+        <field name="arch" type="xml">
+
+            <form string="Stock Card">
+
+                <group>
+                    <group>
+                        <field name="product_id" required="1"/>
+                        <field name="location_id" required="1"/>
+                    </group>
+
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="action_load"
+                            type="object"
+                            string="Load Stock Card"
+                            class="btn-primary"/>
+
+                    <button string="Cancel"
+                            special="cancel"/>
+                </footer>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- =========================
+         Wizard Action
+    ========================== -->
+
+    <record id="action_stock_card_wizard" model="ir.actions.act_window">
+        <field name="name">Stock Card</field>
+        <field name="res_model">stock.card.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+    <!-- =========================
+         Safe Menu Parent
+    ========================== -->
+
+    <menuitem id="menu_stock_card_report"
+              name="Stock Card"
+              parent="stock.menu_stock_root"
+              action="action_stock_card_wizard"
+              sequence="90"/>
+
+</odoo>

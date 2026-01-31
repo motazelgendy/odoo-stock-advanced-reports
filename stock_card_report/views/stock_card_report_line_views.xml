@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="view_stock_card_report_line_tree" model="ir.ui.view">
+        <field name="name">stock.card.report.line.tree</field>
+        <field name="model">stock.card.report.line</field>
+        <field name="arch" type="xml">
+            <tree string="Stock Card Details">
+                <field name="date"/>
+                <field name="reference"/>
+                <field name="move_id"/>
+                <field name="qty_in"/>
+                <field name="qty_out"/>
+                <field name="balance"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
