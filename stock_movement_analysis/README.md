@@ -28,7 +28,7 @@ It focuses purely on **operational stock movements** such as Sales, Purchases, I
 
 ## 🔎 Overview
 
-This module analyzes validated stock moves (`stock.move`) and classifies them by operation type within a defined date range.
+This module analyzes validated stock moves line (`stock.move.line`) and classifies them by operation type within a defined date range.
 
 It allows inventory managers to understand:
 
@@ -94,8 +94,8 @@ stock.move.line
 1. Filter validated moves (`state = done`)
 2. Apply date range filter
 3. Classify moves based on:
-   - Picking type
-   - Source & Destination locations
+   - opposite location usage 'type'
+   - Source & Destination locations for in / out moves
 4. Aggregate quantities per product
 5. Present summarized results
 
