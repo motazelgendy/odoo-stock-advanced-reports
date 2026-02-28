@@ -1,50 +1,154 @@
-# Stock Card SQL Report — Odoo Module
+# 📦 Odoo Inventory Reporting Modules
 
-## 📌 Overview
+[![Odoo Version](https://img.shields.io/badge/Odoo-16%2B-purple)](#)
+[![License](https://img.shields.io/badge/License-LGPL--3-blue.svg)](#)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-success)](#)
 
-Stock Card SQL Report is a high-performance Odoo module that generates a detailed stock movement ledger (Stock Card) using a SQL engine instead of ORM aggregation.
+This repository contains a collection of advanced inventory reporting modules for Odoo.
 
-It is designed specifically for:
+The goal of this repo is to provide structured, performance-safe, and operationally useful stock analysis tools that extend Odoo’s standard reporting capabilities.
 
-- Large databases
-- Heavy stock movement volumes
-- Fast reporting requirements
-- Accurate running balances
-- Location-based stock tracking
-
-All heavy calculations are executed in SQL using window functions, while the wizard layer handles user filters and opening balance logic.
+New reporting modules will be added periodically.
 
 ---
 
-## 🎯 Features
+## 🎯 Purpose
 
-- Product-based stock card
-- Location-based movement calculation
-- Supports location hierarchy (child locations)
-- SQL-calculated:
-  - Qty In
-  - Qty Out
-  - Running Balance
-- Wizard-based filters
-- Optional date range filtering
-- Opening balance calculated from last movement before date_from
-- Separate result screen (tree view)
-- No heavy ORM loops
-- Scalable for large datasets
+Standard Odoo inventory reports are powerful but sometimes insufficient for operational analysis.
 
----
+This repository focuses on:
 
-## 🧠 Architecture
+- Operational stock movement analysis  
+- Product-level stock tracking  
+- Inventory auditing support  
+- Clear analytical aggregation  
+- Production-safe ORM-based implementations  
 
-The module follows a layered reporting design:
+All modules in this repository:
 
-
-### Why this design?
-
-- SQL handles heavy math efficiently
-- ORM handles flexible filtering
-- Results are reusable for Excel / PDF later
-- Clean separation of concerns
+- Use Odoo ORM and optimized SQL queries when appropriate
+- Choose implementation strategy based on performance and data volume
+- Do not interfere with accounting logic
+- Are designed for real production environments
 
 ---
 
+## 📦 Available Modules
+
+### 1️⃣ Stock Movement Analysis
+
+Analyzes stock movements within a selected period and classifies them into:
+
+- Sales
+- Purchases
+- Manufacturing
+- Internal Transfers
+- Inventory Adjustments
+
+Provides aggregated quantities per product for operational review.
+
+---
+
+### 2️⃣ Product Stock Card
+
+Detailed product movement ledger showing:
+
+- Opening balance
+- Incoming quantities
+- Outgoing quantities
+- Running balance
+
+
+Useful for:
+
+- Auditing product history
+- Investigating stock discrepancies
+- Tracking operational errors
+
+---
+
+## 🛠 Technical Principles
+
+This repository follows these development principles:
+
+- Clean architecture
+- ORM-first approach
+- No direct database manipulation
+- Clear movement classification logic
+- Performance-aware aggregation
+- Minimal external dependencies
+
+---
+
+## 🔐 Access Control
+
+Modules are intended for:
+
+- Inventory Users
+- Inventory Managers
+- Auditors (optional depending on implementation)
+
+---
+
+## ⚙ Installation
+
+1️⃣ Clone the repository:
+
+```bash
+git clone https://github.com/motazelgendy/odoo-stock-advanced-reports.git
+```
+
+2️⃣ Place it inside your Odoo custom addons path.
+
+3️⃣ Restart Odoo.
+
+4️⃣ Update Apps List.
+
+5️⃣ Install the required modules individually.
+
+---
+
+## 🔄 Keeping the Repository Up to Date
+
+This repository is actively maintained and new reporting modules will be added periodically.
+
+To ensure your server always has access to the latest reports, keep your local clone updated:
+
+```bash
+cd odoo-stock-advanced-reports
+git pull origin main
+```
+
+After pulling updates:
+
+- Restart Odoo
+- Update Apps List
+- Install any newly added modules
+
+Keeping the repository up to date ensures new analytical tools are immediately available on your server.
+
+## 🚀 Roadmap
+
+Future planned reporting modules may include:
+
+- Slow Moving / Fast Moving Analysis
+- Negative Stock Monitoring Report
+- Warehouse Performance Analysis (FSN , XYZ, Turnover)
+- Stock Aging Report
+- Multi-Warehouse Comparative Analysis
+
+---
+
+## 🔄 Update Policy
+
+Modules will be added and improved over time.
+
+This repository is actively maintained and continuously evolving based on real-world inventory requirements.
+
+---
+
+
+
+## 👨‍💻 Maintainer
+
+Developed for advanced inventory operational reporting in Odoo production environments.
