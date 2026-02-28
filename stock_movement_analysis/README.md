@@ -8,7 +8,7 @@ Stock Movement Analysis is an analytical module for Odoo that provides a consoli
 
 It focuses purely on **operational stock movements** such as Sales, Purchases, Inventory Adjustments, Manufacturing, and Internal Transfers.
 
-> This module does NOT use SQL views and does NOT depend on stock valuation layers.
+
 
 ---
 
