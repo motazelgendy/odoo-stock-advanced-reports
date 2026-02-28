@@ -38,7 +38,7 @@ It allows inventory managers to understand:
 - Manufacturing consumption & production
 - Internal stock transfers
 
-All analysis is performed using standard Odoo ORM without SQL views.
+All analysis is performed using standard Odoo ORM.
 
 ---
 
@@ -86,7 +86,7 @@ Each movement type is aggregated per product within the selected period.
 ### Core Model
 
 ```python
-stock.move
+stock.move.line
 ```
 
 ### Logic Summary
