@@ -127,6 +127,17 @@ After pulling updates:
 
 Keeping the repository up to date ensures new analytical tools are immediately available on your server.
 
+### ☁ Odoo.sh Users
+
+Using Odoo.sh?
+
+Relax.  
+Push your code and let the pipeline handle the rest.
+
+Just remember:  
+Deployment is automatic.  
+Module installation is still your responsibility 😁
+
 ## 🚀 Roadmap
 
 Future planned reporting modules may include:
@@ -152,3 +163,4 @@ This repository is actively maintained and continuously evolving based on real-w
 ## 👨‍💻 Maintainer
 
 Developed for advanced inventory operational reporting in Odoo production environments.
+
