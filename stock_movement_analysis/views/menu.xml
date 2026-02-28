@@ -1,0 +1,13 @@
+<odoo>
+    <record id="action_stock_movement_analysis_wizard" model="ir.actions.act_window">
+        <field name="name">Stock Movement Analysis</field>
+        <field name="res_model">stock.movement.analysis.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_stock_movement_analysis"
+              name="Stock Movement Analysis"
+              parent="stock.menu_stock_root"
+              action="action_stock_movement_analysis_wizard"/>
+</odoo>

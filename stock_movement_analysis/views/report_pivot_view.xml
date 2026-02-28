@@ -1,0 +1,51 @@
+<odoo>
+
+    <record id="view_stock_movement_analysis_pivot" model="ir.ui.view">
+        <field name="name">stock.movement.analysis.report.pivot</field>
+        <field name="model">stock.movement.analysis.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Stock Movement Analysis">
+
+                <!-- Rows -->
+                <field name="product_id" type="row"/>
+                <field name="categ_id" type="row"/>
+
+                <!-- Balances -->
+                <field name="opening_qty" type="measure"/>
+                <field name="closing_qty" type="measure"/>
+
+                <!-- Purchase -->
+                <field name="purchase_qty" type="measure"/>
+                <field name="purchase_return_qty" type="measure"/>
+
+                <!-- Sales -->
+                <field name="sales_qty" type="measure"/>
+                <field name="sales_return_qty" type="measure"/>
+
+                <!-- Production -->
+                <field name="production_qty" type="measure"/>
+                <field name="unbuild_qty" type="measure"/>
+
+                <!-- Adjustments -->
+                <field name="adjustment_in_qty" type="measure"/>
+                <field name="adjustment_out_qty" type="measure"/>
+                <field name="other_inventory_in_qty" type="measure"/>
+                <field name="other_inventory_out_qty" type="measure"/>
+
+                <!-- Internal -->
+                <field name="internal_in_qty" type="measure"/>
+                <field name="internal_out_qty" type="measure"/>
+
+                <!-- Transit -->
+                <field name="transit_in_qty" type="measure"/>
+                <field name="transit_out_qty" type="measure"/>
+
+                <!-- View -->
+                <field name="view_in_qty" type="measure"/>
+                <field name="view_out_qty" type="measure"/>
+
+            </pivot>
+        </field>
+    </record>
+
+</odoo>
