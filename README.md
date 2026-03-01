@@ -67,19 +67,6 @@ Useful for:
 
 ---
 
-## 🛠 Technical Principles
-
-This repository follows these development principles:
-
-- Clean architecture
-- ORM-first approach
-- No direct database manipulation
-- Clear movement classification logic
-- Performance-aware aggregation
-- Minimal external dependencies
-
----
-
 ## 🔐 Access Control
 
 Modules are intended for:
@@ -163,4 +150,5 @@ This repository is actively maintained and continuously evolving based on real-w
 ## 👨‍💻 Maintainer
 
 Developed for advanced inventory operational reporting in Odoo production environments.
+
 
